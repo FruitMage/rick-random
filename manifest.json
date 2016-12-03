@@ -2,8 +2,8 @@
 	"manifest_version": 2,
 
 	"name": "Rick Random",
-	"description": "There's a 1% chance that I'm never gonna give you up",
-	"version": "0.1",
+	"description": "There's a 10% chance that I'm never gonna give you up",
+	"version": "1.0",
 
 	"browser_action": {
 		"default_icon": "img/icon.png"
