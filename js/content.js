@@ -1,21 +1,22 @@
 var extensionID = chrome.i18n.getMessage("@@extension_id");
 
 var body = document.createElement("body");
-var video = document.createElement("iframe");
+var video = document.createElement("video");
 var videoW = document.createAttribute("width");
 var videoH = document.createAttribute("height");
-var videoFB = document.createAttribute("frameborder");
+var videoAuto = document.createAttribute("autoplay");
 var videoSrc = document.createAttribute("src");
+var videoLoop = document.createAttribute("loop");
 var rickrollChance;
 
 videoW.value = "1280";
 videoH.value = "720";
-videoFB.value = "0";
-videoSrc.value = "https://www.youtube.com/embed/Xh8YG25Y6Pc?rel=0&amp;controls=0&amp;showinfo=0";
+videoSrc.value = "https://github.com/FruitMage/rick-random/blob/master/video/rickroll.mp4";
 video.setAttributeNode(videoW);
 video.setAttributeNode(videoH);
 video.setAttributeNode(videoSrc);
-video.setAttributeNode(videoFB);
+video.setAttributeNode(videoAuto);
+video.setAttributeNode(videoLoop);
 body.appendChild(video);
 rickrollChance = Math.floor(Math.random() * 100) + 1;
 
