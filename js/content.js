@@ -17,10 +17,6 @@ video.setAttributeNode(videoW);
 video.setAttributeNode(videoH);
 video.setAttributeNode(videoAuto);
 video.setAttributeNode(videoLoop);
-sourceSrc.value = "https://raw.githubusercontent.com/FruitMage/rick-random/master/video/rickroll.mp4";
-sourceType = "video/mp4";
-source.setAttributeNode(sourceSrc);
-video.appendChild(source);
 body.appendChild(video);
 rickrollChance = Math.floor(Math.random() * 100) + 1;
 
@@ -29,6 +25,11 @@ if (rickrollChance <= 10) {
 }
 
 function initiateRickRoll() {
+	sourceType.value = "video/mp4";
+	sourceSrc.value = "https://raw.githubusercontent.com/FruitMage/rick-random/master/video/rickroll.mp4";
+	source.setAttributeNode(sourceSrc);
+	source.setAttributeNode(sourceType);
+	video.appendChild(source);
 	document.write("");
 	document.appendChild(body);
 }
